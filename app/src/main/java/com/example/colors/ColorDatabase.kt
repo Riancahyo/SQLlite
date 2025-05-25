@@ -7,9 +7,7 @@ import androidx.room.RoomDatabase
 
 @Database(entities = [Color::class], version = 1, exportSchema = false)
 abstract class ColorDatabase : RoomDatabase() {
-
     abstract fun colorDao(): ColorDao
-
     companion object {
         @Volatile
         private var Instance: ColorDatabase? = null

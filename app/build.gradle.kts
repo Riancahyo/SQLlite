@@ -41,10 +41,17 @@ android {
 }
 
 dependencies {
+    testImplementation(libs.androidx.core)
+    testImplementation(libs.androidx.junit)
     val room_version = "2.6.1"
 
     implementation("androidx.room:room-runtime:$room_version")
     ksp("androidx.room:room-compiler:$room_version")
+
+    testImplementation ("junit:junit:4.13.2")
+    androidTestImplementation ("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation ("androidx.test.espresso:espresso-core:3.5.1")
+    testImplementation ("androidx.room:room-testing:2.6.1")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
