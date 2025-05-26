@@ -10,7 +10,7 @@ import androidx.room.Update
 interface ColorDao {
 
     @Query("SELECT * FROM color")
-    fun getAll(): Array<Color>
+    fun getAll(): List<Color>
 
     @Insert
     fun insert(vararg color: Color)
