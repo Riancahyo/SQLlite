@@ -104,7 +104,7 @@ class MainActivity : ComponentActivity() {
                                                 .background(
                                                     try {
                                                         ComposeColor(warna.hex.toColorInt())
-                                                    } catch (e: Exception) {
+                                                    } catch (_: Exception) {
                                                         ComposeColor.Gray
                                                     },
                                                     shape = CircleShape
