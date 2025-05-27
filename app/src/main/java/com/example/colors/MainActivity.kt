@@ -22,6 +22,7 @@ import com.example.colors.ui.theme.ColorsTheme
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import androidx.core.graphics.toColorInt
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -102,7 +103,7 @@ class MainActivity : ComponentActivity() {
                                                 .size(50.dp)
                                                 .background(
                                                     try {
-                                                        ComposeColor(android.graphics.Color.parseColor(warna.hex))
+                                                        ComposeColor(warna.hex.toColorInt())
                                                     } catch (e: Exception) {
                                                         ComposeColor.Gray
                                                     },
